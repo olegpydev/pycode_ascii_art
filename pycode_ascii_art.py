@@ -4,13 +4,13 @@ from PIL import Image, ImageEnhance
 
 class PyCodeAsciiArt:
     """
-    Generates ASCII Art from Python code or custom text from an image.
-    Can make the resulting ascii image executable Python code (if the source code was Python code)
+    Creates ASCII Art from Python code based on an image.
+    Can make the resulting ascii art executable Python code.
     """
 
-    DEFAULT_PLACEHOLDER = '@'
-    CHARS_1B = (DEFAULT_PLACEHOLDER, ' ')
-    CHARS_4B = (DEFAULT_PLACEHOLDER, '*', '.', ' ')
+    DEFAULT_PLACEHOLDER: str = '@'
+    CHARS_1B: tuple[str] = (DEFAULT_PLACEHOLDER, ' ')
+    CHARS_4B: tuple[str] = (DEFAULT_PLACEHOLDER, '*', '.', ' ')
 
     def __init__(self, img: Image.Image = None, width: int = 70):
         self.img: Image.Image = img
