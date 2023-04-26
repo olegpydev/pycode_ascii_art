@@ -18,6 +18,7 @@
 ---
 
 ## Зависимости и используемые библиотеки:
+- Python 3.10
 - PySimpleGUI
 - clipboard
 - Pillow
@@ -27,6 +28,7 @@
 ## Для работы с программой
 
 - скачать или клонировать репозиторий
+- установить зависимости: <code>pip install -r requirements.txt</code>
 - запускать main.py (<code>python main.py</code> или <code>python3 main.py</code>)
 
 ## Примечания
