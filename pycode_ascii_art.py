@@ -101,7 +101,7 @@ class PyCodeAsciiArt:
             return ''
         b64_str = base64.b64encode(self.source_text.encode()).decode()
         n = 0
-        res = '' if not self.add_exec else 'exec(__import__(\'base64\').b64decode(\"\"\"\n\n'
+        res = '' if not self.add_exec else '"""\n\n'
         for i in self.ascii_image:
             if i != self.DEFAULT_PLACEHOLDER or (n == len(b64_str) and self.need_fill):
                 res += i
@@ -117,5 +117,5 @@ class PyCodeAsciiArt:
             n += self.width
 
         if self.add_exec:
-            res += '\n\"\"\"))'
+            res += '\n"""\nexec(__import__("base64").b64decode(__doc__))'
         return res
